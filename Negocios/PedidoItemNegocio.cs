@@ -14,9 +14,9 @@ namespace Negocios
             acessoDadosSqlServer.AdicionarParametros("@IDProduto", pedidoItem.Produto.IDProduto);
             acessoDadosSqlServer.AdicionarParametros("@Quantidade", pedidoItem.Quantidade);
             acessoDadosSqlServer.AdicionarParametros("@PrecoUnitario", pedidoItem.PrecoUnitario);
-            string IDPedido = acessoDadosSqlServer.ExecutarManipulacao(CommandType.StoredProcedure, "uspCadastrarPedidoItem").ToString();
+            string IDPedidoItem = acessoDadosSqlServer.ExecutarManipulacao(CommandType.StoredProcedure, "uspCadastrarPedidoItem").ToString();
 
-            return IDPedido;
+            return IDPedidoItem;
         }
     }
 }

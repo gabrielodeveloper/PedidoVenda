@@ -3,4 +3,5 @@
   <Project Path="Apresentacao/Apresentacao.csproj" Id="e0a1c3b8-3cda-498a-aee9-40ec7131d4bc" />
   <Project Path="Negocios/Negocios.csproj" Id="1b029edb-e6d6-4bee-9b4d-0e7a8d14c87f" />
   <Project Path="ObjetoTransferencia/ObjetoTransferencia.csproj" Id="9a73ba6f-ee3e-4606-886f-f460d06c7ec6" />
+  <Project Path="TesteNeg/TesteNeg.csproj" Id="2fd75a34-b6c5-4bb8-ab2a-4f7365329d3f" />
 </Solution>
