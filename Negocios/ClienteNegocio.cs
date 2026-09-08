@@ -12,7 +12,7 @@ namespace Negocios
 
             acessoDadosSqlServer.LimparParametros();
             acessoDadosSqlServer.AdicionarParametros("@Nome", cliente.Nome);
-            acessoDadosSqlServer.AdicionarParametros("@CPF", cliente.CFP);
+            acessoDadosSqlServer.AdicionarParametros("@CPF", cliente.CPF);
             string IDCliente = acessoDadosSqlServer.ExecutarManipulacao(CommandType.StoredProcedure, "uspCadastrarCliente").ToString();
 
             return IDCliente;
