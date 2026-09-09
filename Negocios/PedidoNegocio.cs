@@ -39,7 +39,7 @@ namespace Negocios
                     Pedido pedido = new Pedido();
                 
 
-                    pedido.IDPedido = Convert.ToInt32(row["@IDPedido"]);
+                    pedido.IDPedido = Convert.ToInt32(row["IDPedido"]);
                     pedido.DataHora = Convert.ToDateTime(row["DataHora"]);
                     pedido.Cliente = new Cliente();
 

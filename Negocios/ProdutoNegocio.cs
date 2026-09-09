@@ -37,8 +37,8 @@ namespace Negocios
                 object descricaoProduto = string.IsNullOrEmpty(descricao) ? (object)DBNull.Value : descricao;
 
                 acessoDadosSqlServer.LimparParametros();
-                acessoDadosSqlServer.AdicionarParametros("IDProduto", codigo);
-                acessoDadosSqlServer.AdicionarParametros("Descricao", descricaoProduto);
+                acessoDadosSqlServer.AdicionarParametros("@IDProduto", codigo);
+                acessoDadosSqlServer.AdicionarParametros("@Descricao", descricaoProduto);
                 DataTable dataTableProduto = acessoDadosSqlServer.ExecutarConsulta(CommandType.StoredProcedure, "uspConsultarProdutoPorCodigoOuDescricao");
 
                 foreach (DataRow row in dataTableProduto.Rows)

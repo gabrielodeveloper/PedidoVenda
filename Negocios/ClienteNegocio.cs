@@ -38,7 +38,7 @@ namespace Negocios
                 object nomeCliente = string.IsNullOrEmpty(nome) ? (object)DBNull.Value : nome;
 
                 acessoDadosSqlServer.LimparParametros();
-                acessoDadosSqlServer.AdicionarParametros("IDCliente", codigo);
+                acessoDadosSqlServer.AdicionarParametros("@IDCliente", codigo);
                 acessoDadosSqlServer.AdicionarParametros("@Nome", nomeCliente);
 
                 DataTable dataTableCliente = acessoDadosSqlServer.ExecutarConsulta(CommandType.StoredProcedure, "uspConsultarClientePorCodigoOuNome");
