@@ -2,7 +2,7 @@
 
 namespace ObjetoTransferencia
 {
-    internal class ProdutoColecao : List<Produto>
+    public class ProdutoColecao : List<Produto>
     {
     }
 }
