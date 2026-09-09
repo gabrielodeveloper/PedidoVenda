@@ -23,7 +23,7 @@ namespace Negocios
             catch (Exception ex)
             {
 
-                throw new Exception("Não foi possível inserir produto, Detalhes " + ex.Message); ;
+                throw new Exception($"Não foi possível inserir produto, Detalhes: {ex.Message}"); ;
             }
           }
 
@@ -58,7 +58,7 @@ namespace Negocios
             }
             catch (Exception ex)
             {
-                throw new Exception("Não foi possível consultar produto, Detalhes " + ex.Message); ;
+                throw new Exception($"Não foi possível consultar produto, Detalhes: {ex.Message}"); ;
             }
         }
     }

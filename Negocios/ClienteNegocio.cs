@@ -23,7 +23,7 @@ namespace Negocios
             catch (Exception ex)
             {
 
-                throw new Exception("Não foi possível inserir cliente, Detalhes " + ex.Message); ;
+                throw new Exception($"Não foi possível inserir cliente, Detalhes: {ex.Message}"); ;
             }
 
         }
@@ -38,8 +38,8 @@ namespace Negocios
                 object nomeCliente = string.IsNullOrEmpty(nome) ? (object)DBNull.Value : nome;
 
                 acessoDadosSqlServer.LimparParametros();
-                acessoDadosSqlServer.AdicionarParametros("IDCliente", idCliente);
-                acessoDadosSqlServer.AdicionarParametros("@Nome", nome);
+                acessoDadosSqlServer.AdicionarParametros("IDCliente", codigo);
+                acessoDadosSqlServer.AdicionarParametros("@Nome", nomeCliente);
 
                 DataTable dataTableCliente = acessoDadosSqlServer.ExecutarConsulta(CommandType.StoredProcedure, "uspConsultarClientePorCodigoOuNome");
 
@@ -60,7 +60,7 @@ namespace Negocios
             catch (Exception ex)
             {
 
-                throw new Exception("Não foi possível consultar cliente, Detalhes " + ex.Message);
+                throw new Exception($"Não foi possível consultar cliente, Detalhes: {ex.Message}");
             }
         }
     }
