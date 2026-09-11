@@ -8,83 +8,78 @@ namespace TesteNegocios
     {
         static void Main(string[] args)
         {
-            // =========================
-            // TESTE CLIENTE
-            // =========================
-
-            Cliente cliente = new Cliente();
-
-            cliente.Nome = "Cliente Teste";
-            cliente.CPF = "11111111111";
-
-            ClienteNegocio clienteNegocio = new ClienteNegocio();
-
-            string idCliente = clienteNegocio.InserirCliente(cliente);
-
-            cliente.IDCliente = Convert.ToInt32(idCliente);
-
-            Console.WriteLine($"Cliente cadastrado. ID: {cliente.IDCliente}");
-
-
-            // =========================
-            // TESTE PRODUTO
-            // =========================
-
-            Produto produto = new Produto();
-
-            produto.Descricao = "Produto Teste";
-            produto.Preco = 25.50m;
-            produto.Estoque = 100;
-
-            ProdutoNegocio produtoNegocio = new ProdutoNegocio();
-
-            string idProduto = produtoNegocio.InserirProduto(produto);
-
-            produto.IDProduto = Convert.ToInt32(idProduto);
-
-            Console.WriteLine($"Produto cadastrado. ID: {produto.IDProduto}");
-
-
-            // =========================
-            // TESTE PEDIDO
-            // =========================
-
-            Pedido pedido = new Pedido();
-
-            pedido.Cliente = cliente;
-            pedido.DataHora = DateTime.Now;
-
             PedidoNegocio pedidoNegocio = new PedidoNegocio();
-
-            string idPedido = pedidoNegocio.InserirPedido(pedido);
-
-            pedido.IDPedido = Convert.ToInt32(idPedido);
-
-            Console.WriteLine($"Pedido cadastrado. ID: {pedido.IDPedido}");
-
-
-            // =========================
-            // TESTE PEDIDO ITEM
-            // =========================
-
-            PedidoItem pedidoItem = new PedidoItem();
-
-            pedidoItem.IDPedido = pedido.IDPedido;
-            pedidoItem.Produto = produto;
-            pedidoItem.Quantidade = 2;
-            pedidoItem.PrecoUnitario = produto.Preco;
-
             PedidoItemNegocio pedidoItemNegocio = new PedidoItemNegocio();
 
-            string idPedidoItem = pedidoItemNegocio.InserirPedidoItem(pedidoItem);
 
-            pedidoItem.IDPedidoItem = Convert.ToInt32(idPedidoItem);
+            // ====================================
+            // CONSULTAR PEDIDO
+            // ====================================
 
-            Console.WriteLine($"Item do pedido cadastrado. ID: {pedidoItem.IDPedidoItem}");
+            Console.WriteLine("====================================");
+            Console.WriteLine("       CONSULTA DE PEDIDO");
+            Console.WriteLine("====================================");
+
+            Console.Write("Digite o ID do pedido: ");
+            int idPedido = Convert.ToInt32(Console.ReadLine());
+
+            PedidoColacao pedidos = pedidoNegocio.ConsultarPedido(idPedido);
+
+            if (pedidos.Count == 0)
+            {
+                Console.WriteLine("\nPedido não encontrado.");
+            }
+            else
+            {
+                foreach (Pedido pedido in pedidos)
+                {
+                    Console.WriteLine("\n--- DADOS DO PEDIDO ---");
+
+                    Console.WriteLine($"ID Pedido: {pedido.IDPedido}");
+                    Console.WriteLine($"Data: {pedido.DataHora}");
+                    Console.WriteLine($"ID Cliente: {pedido.Cliente.IDCliente}");
+                    Console.WriteLine($"Cliente: {pedido.Cliente.Nome}");
+                    Console.WriteLine($"CPF: {pedido.Cliente.CPF}");
+
+                    Console.WriteLine($"Quantidade Total: {pedido.QuantidadeTotal}");
+                    Console.WriteLine($"Valor Total: {pedido.ValorTotal:C}");
+                }
+            }
 
 
-            Console.WriteLine();
-            Console.WriteLine("Todos os testes foram executados.");
+            // ====================================
+            // CONSULTAR ITENS DO PEDIDO
+            // ====================================
+
+            Console.WriteLine("\n--- ITENS DO PEDIDO ---");
+
+            PedidoItemColecao itens =
+                pedidoItemNegocio.ConsultarPedidoItem(idPedido);
+
+            if (itens.Count == 0)
+            {
+                Console.WriteLine("Nenhum item encontrado.");
+            }
+            else
+            {
+                foreach (PedidoItem item in itens)
+                {
+                    Console.WriteLine("\n----------------------------");
+
+                    Console.WriteLine($"ID Item: {item.IDPedidoItem}");
+                    Console.WriteLine($"ID Produto: {item.Produto.IDProduto}");
+                    Console.WriteLine($"Produto: {item.Produto.Descricao}");
+                    Console.WriteLine($"Quantidade: {item.Quantidade}");
+                    Console.WriteLine($"Preço Unitário: {item.PrecoUnitario:C}");
+                    Console.WriteLine($"Valor Total: {item.ValorTotal:C}");
+                }
+            }
+
+
+            Console.WriteLine("\n====================================");
+            Console.WriteLine("          TESTE FINALIZADO");
+            Console.WriteLine("====================================");
+
             Console.ReadKey();
         }
     }

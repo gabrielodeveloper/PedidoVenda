@@ -1,13 +1,17 @@
 ﻿using AcessoBancoDados;
 using ObjetoTransferencia;
-using System;
 using System.Data;
 
 namespace Negocios
 {
     public class ClienteNegocio
     {
-        AcessoDadosSqlServer acessoDadosSqlServer = new AcessoDadosSqlServer();
+        private readonly AcessoDadosSqlServer acessoDadosSqlServer;
+        
+        public ClienteNegocio(AcessoDadosSqlServer acessoDadosSqlServer)
+        {
+            this.acessoDadosSqlServer = acessoDadosSqlServer;
+        }
         public string InserirCliente(Cliente cliente)
         {
             try

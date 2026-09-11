@@ -1,16 +1,20 @@
-﻿using AcessoBancoDados.Properties;
+﻿using Microsoft.Data.SqlClient;
 using System.Data;
-using System.Data.SqlClient;
-using System;
 
 namespace AcessoBancoDados
 {
     public class AcessoDadosSqlServer
     {
+        private readonly string stringConexao;
+
+        public AcessoDadosSqlServer(string stringConexao)
+        {
+            this.stringConexao = stringConexao;
+        }
         //Cria a conexão com o banco de dados.
         private SqlConnection CriarConexao()
         {
-            return new SqlConnection(Settings.Default.stringConexao);
+            return new SqlConnection(stringConexao);
         }
 
         private SqlParameterCollection sqlParameterCollection = new SqlCommand().Parameters;

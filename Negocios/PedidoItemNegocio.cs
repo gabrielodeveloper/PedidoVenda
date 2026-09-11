@@ -7,7 +7,12 @@ namespace Negocios
 {
     public class PedidoItemNegocio
     {
-        AcessoDadosSqlServer acessoDadosSqlServer = new AcessoDadosSqlServer();
+        private readonly AcessoDadosSqlServer acessoDadosSqlServer;
+
+        public PedidoItemNegocio(AcessoDadosSqlServer acessoDadosSqlServer)
+        {
+            this.acessoDadosSqlServer = acessoDadosSqlServer;
+        }
         public string InserirPedidoItem(PedidoItem pedidoItem)
         {
             try
@@ -46,6 +51,7 @@ namespace Negocios
                     pedidoItem.Produto.Descricao = Convert.ToString(row["Descricao"]);
                     pedidoItem.Quantidade = Convert.ToInt32(row["Quantidade"]);
                     pedidoItem.PrecoUnitario = Convert.ToDecimal(row["PrecoUnitario"]);
+                    pedidoItem.ValorTotal = Convert.ToDecimal(row["ValorTotal"]);
 
                     pedidoItems.Add(pedidoItem);
                 }

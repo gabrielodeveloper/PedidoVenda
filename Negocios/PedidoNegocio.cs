@@ -7,7 +7,12 @@ namespace Negocios
 {
     public class PedidoNegocio
     {
-        AcessoDadosSqlServer acessoDadosSqlServer = new AcessoDadosSqlServer();
+        private readonly AcessoDadosSqlServer acessoDadosSqlServer;
+
+        public PedidoNegocio(AcessoDadosSqlServer acessoDadosSqlServer)
+        {
+            this.acessoDadosSqlServer = acessoDadosSqlServer;
+        }
         public string InserirPedido(Pedido pedido)
         {
             try
@@ -46,6 +51,8 @@ namespace Negocios
                     pedido.Cliente.IDCliente = Convert.ToInt32(row["IDCliente"]);
                     pedido.Cliente.Nome = Convert.ToString(row["Nome"]);
                     pedido.Cliente.CPF = Convert.ToString(row["CPF"]);
+                    pedido.QuantidadeTotal = Convert.ToInt32(row["QuantidadeTotal"]);
+                    pedido.ValorTotal = Convert.ToDecimal(row["ValorTotal"]);
 
                     pedidos.Add(pedido);
                 }
