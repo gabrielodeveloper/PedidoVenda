@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "C:\\Projetos\\PedidoVenda\\PedidoVenda\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1B029EDB-E6D6-4BEE-9B4D-0E7A8D14C87F}|Negocios\\Negocios.csproj|c:\\projetos\\pedidovenda\\pedidovenda\\negocios\\pedidonegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1B029EDB-E6D6-4BEE-9B4D-0E7A8D14C87F}|Negocios\\Negocios.csproj|solutionrelative:negocios\\pedidonegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DFD6C92B-DA94-42A5-833F-D6E40D8E39DA}|API\\API.csproj|c:\\projetos\\pedidovenda\\pedidovenda\\api\\controllers\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFD6C92B-DA94-42A5-833F-D6E40D8E39DA}|API\\API.csproj|solutionrelative:api\\controllers\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1B029EDB-E6D6-4BEE-9B4D-0E7A8D14C87F}|Negocios\\Negocios.csproj|c:\\projetos\\pedidovenda\\pedidovenda\\negocios\\produtonegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1B029EDB-E6D6-4BEE-9B4D-0E7A8D14C87F}|Negocios\\Negocios.csproj|solutionrelative:negocios\\produtonegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1B029EDB-E6D6-4BEE-9B4D-0E7A8D14C87F}|Negocios\\Negocios.csproj|c:\\projetos\\pedidovenda\\pedidovenda\\negocios\\clientenegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1B029EDB-E6D6-4BEE-9B4D-0E7A8D14C87F}|Negocios\\Negocios.csproj|solutionrelative:negocios\\clientenegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DFD6C92B-DA94-42A5-833F-D6E40D8E39DA}|API\\API.csproj|c:\\projetos\\pedidovenda\\pedidovenda\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFD6C92B-DA94-42A5-833F-D6E40D8E39DA}|API\\API.csproj|solutionrelative:api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,50 +18,36 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "PedidoNegocio.cs",
-              "DocumentMoniker": "C:\\Projetos\\PedidoVenda\\PedidoVenda\\Negocios\\PedidoNegocio.cs",
-              "RelativeDocumentMoniker": "Negocios\\PedidoNegocio.cs",
-              "ToolTip": "C:\\Projetos\\PedidoVenda\\PedidoVenda\\Negocios\\PedidoNegocio.cs",
-              "RelativeToolTip": "Negocios\\PedidoNegocio.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-09T17:09:20.076Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ClienteNegocio.cs",
-              "DocumentMoniker": "C:\\Projetos\\PedidoVenda\\PedidoVenda\\Negocios\\ClienteNegocio.cs",
-              "RelativeDocumentMoniker": "Negocios\\ClienteNegocio.cs",
-              "ToolTip": "C:\\Projetos\\PedidoVenda\\PedidoVenda\\Negocios\\ClienteNegocio.cs",
-              "RelativeToolTip": "Negocios\\ClienteNegocio.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAwwD4AAAAQAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "ClienteController.cs",
+              "DocumentMoniker": "C:\\Projetos\\PedidoVenda\\PedidoVenda\\API\\Controllers\\ClienteController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\ClienteController.cs",
+              "ToolTip": "C:\\Projetos\\PedidoVenda\\PedidoVenda\\API\\Controllers\\ClienteController.cs",
+              "RelativeToolTip": "API\\Controllers\\ClienteController.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAA9wBEAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-09T16:03:37.337Z",
+              "WhenOpened": "2026-09-11T01:09:20.261Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ProdutoNegocio.cs",
-              "DocumentMoniker": "C:\\Projetos\\PedidoVenda\\PedidoVenda\\Negocios\\ProdutoNegocio.cs",
-              "RelativeDocumentMoniker": "Negocios\\ProdutoNegocio.cs",
-              "ToolTip": "C:\\Projetos\\PedidoVenda\\PedidoVenda\\Negocios\\ProdutoNegocio.cs",
-              "RelativeToolTip": "Negocios\\ProdutoNegocio.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAALAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Projetos\\PedidoVenda\\PedidoVenda\\API\\Program.cs",
+              "RelativeDocumentMoniker": "API\\Program.cs",
+              "ToolTip": "C:\\Projetos\\PedidoVenda\\PedidoVenda\\API\\Program.cs",
+              "RelativeToolTip": "API\\Program.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-09T15:59:16.317Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "WhenOpened": "2026-09-11T01:02:12.043Z"
             }
           ]
         }

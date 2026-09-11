@@ -8,6 +8,7 @@ namespace ObjetoTransferencia
         public int IDPedido { get; set; }
         public Produto Produto { get; set; }
         public int Quantidade { get; set; }
-        public Decimal PrecoUnitario { get; set; }
+        public decimal PrecoUnitario { get; set; }
+        public decimal ValorTotal { get; set; }
     }
 }

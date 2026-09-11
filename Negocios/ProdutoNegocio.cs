@@ -7,7 +7,12 @@ namespace Negocios
 {
     public class ProdutoNegocio
     {
-          AcessoDadosSqlServer acessoDadosSqlServer = new AcessoDadosSqlServer();
+          private readonly AcessoDadosSqlServer acessoDadosSqlServer;
+
+            public ProdutoNegocio(AcessoDadosSqlServer acessoDadosSqlServer)
+            {
+                this.acessoDadosSqlServer = acessoDadosSqlServer;
+            }
           public string InserirProduto(Produto produto)
           {
             try
