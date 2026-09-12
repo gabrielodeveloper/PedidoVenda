@@ -5,7 +5,7 @@ using ObjetoTransferencia;
 namespace API.Controllers
 {
     [ApiController]
-    [Route("api[controller]")]
+    [Route("api/[controller]")]
     public class PedidoItemController : ControllerBase
     {
         private readonly PedidoItemNegocio pedidoItemNegocio;
@@ -22,7 +22,7 @@ namespace API.Controllers
             return Ok(itens);
         }
         [HttpPost]
-        public IActionResult Iserir(PedidoItem pedidoItem)
+        public IActionResult Inserir(PedidoItem pedidoItem)
         {
             var item = pedidoItemNegocio.InserirPedidoItem(pedidoItem);
 

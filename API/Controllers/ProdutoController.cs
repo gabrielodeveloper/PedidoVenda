@@ -24,7 +24,7 @@ namespace API.Controllers
         }
 
         [HttpPost]
-        public IActionResult Iserir([FromBody] Produto produto)
+        public IActionResult Inserir([FromBody] Produto produto)
         {
             string idProduto = produtoNegocio.InserirProduto(produto);
 
